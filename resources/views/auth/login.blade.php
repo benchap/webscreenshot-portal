@@ -11,7 +11,9 @@
                         </p>
                     @endif
                     <form method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+                        <!-- test -->
+                        <!--{{ csrf_field() }}-->
+                        @csrf
                         <h1>
                             <div class="login-logo">
                                 <a href="#">

@@ -1,0 +1,74 @@
+<html>
+<head>
+<script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.js'></script>
+<script type='text/javascript' src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+<script type='text/javascript' src='/js/form-builder.min.js'></script>
+</head>
+<body>
+<div class="build-wrap"></div>
+<script>
+var formDataRaw = `
+[
+  {
+    "type": "text",
+    "required": false,
+    "label": "Name",
+    "className": "form-control",
+    "name": "text-1582443360658",
+    "access": false,
+    "subtype": "text"
+  },
+  {
+    "type": "textarea",
+    "required": false,
+    "label": "Comments",
+    "className": "form-control",
+    "name": "textarea-1582443357993",
+    "access": false,
+    "subtype": "textarea"
+  },
+  {
+    "type": "number",
+    "required": false,
+    "label": "Number",
+    "className": "form-control",
+    "name": "number-1582449835930",
+    "access": false
+  },
+  {
+    "type": "autocomplete",
+    "required": false,
+    "label": "Autocomplete",
+    "className": "form-control",
+    "name": "autocomplete-1582449851067",
+    "access": false,
+    "requireValidOption": false,
+    "values": [
+      {
+        "label": "North Lakes",
+        "value": "northlakes"
+      },
+      {
+        "label": "Mango Hill",
+        "value": "mangohill"
+      },
+      {
+        "label": "Option 3",
+        "value": "option-3"
+      }
+    ]
+  }
+]`.trim();
+
+$(document).ready(function() { 
+	// Working set 1
+	//formBuilder = $('.build-wrap').formBuilder()
+	//setTimeout(function(){ formBuilder.actions.setData(formData); }, 1500);
+
+	  var formData = JSON.stringify([{ type: "text", label: "Input Label" }]);
+	formData = JSON.stringify([  {    "type": "text",    "required": false,    "label": "Name",    "className": "form-control",    "name": "text-1582443360658",    "access": false,    "subtype": "text"  },  {    "type": "textarea",    "required": false,    "label": "Comments",    "className": "form-control",    "name": "textarea-1582443357993",    "access": false,    "subtype": "textarea"  },  {    "type": "number",    "required": false,    "label": "Number",    "className": "form-control",    "name": "number-1582449835930",    "access": false  },  {    "type": "autocomplete",    "required": false,    "label": "Autocomplete",    "className": "form-control",    "name": "autocomplete-1582449851067",    "access": false,    "requireValidOption": false,    "values": [      {        "label": "North Lakes",        "value": "northlakes"      },      {        "label": "Mango Hill",        "value": "mangohill"      },      {        "label": "Option 3",        "value": "option-3"      }    ]  }]);
+  	var formBuilder = $('.build-wrap').formBuilder({ formData });
+});
+</script>
+</body>
+</html>

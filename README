@@ -1,0 +1,8 @@
+Laravel portal with CoreUI interface to show screenshots taken of websites.
+
+database: webtools_laravel - portal
+
+Was connected to a remote database (mysql) which contained the config for the screenshots and the actual images (mix between local and aws s3)
+
+
+
